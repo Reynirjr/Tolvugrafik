@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="range"] {
+    margin-top: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #282e4d;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #dcae2e;
+}
+
+#HringslediVal, #CsliderVal {
+    font-weight: bold;
+    margin-left: 5px;
+}

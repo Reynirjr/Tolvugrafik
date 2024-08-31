@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="stylesheet" type="text/css" href="../style.css">
+<title>2D Sierpinski Gasket</title>
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+
+void
+main()
+{
+    gl_Position = vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+void
+main()
+{
+    gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+}
+</script>
+
+<script type="text/javascript" src="../../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../../Common/initShaders.js"></script>
+<script type="text/javascript" src="../../Common/MV.js"></script>
+<script type="text/javascript" src="sierpinski-teppi.js"></script>
+</head>   
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<label for="dyptSlider">Dýpt á endurkvæmni: <span id="dyptValue">5</span></label>
+<input type="range" id="dyptSlider" min="1" max="6" value="5" onchange="updateDypt()">
+<a href="../../index.html">Til baka</a>
+</body>
+</html>
