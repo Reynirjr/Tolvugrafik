@@ -1,0 +1,137 @@
+
+body, h1, p, a, canvas, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    overflow: hidden; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background-color: #79a0d5;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+nav {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 70px; 
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+nav a {
+    color: #79a0d5;
+    text-decoration: none;
+    font-size: 1em; 
+    padding: 5px 15px; 
+    border: 1px solid #79a0d5;
+    border-radius: 3px; 
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin: 0 5px; 
+}
+
+nav a:hover {
+    background-color: #79a0d5;
+    color: white;
+}
+
+
+section {
+    position: fixed;
+    top: 60px; 
+    bottom: 50px; 
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+
+canvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+button {
+    background-color: #79a0d5;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover{
+    background-color: #413962;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active{
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    z-index: 1000; 
+}
+
+footer a {
+    color: #79a0d5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Duckshot!</title>
+    <link rel="stylesheet" type="text/css" href="duck.css">
+    <meta name="description" 
+        content="Leikur sem er verkefni í Tölvugrafík í Háskóla Íslands ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Duckshot!">    
+    
+</head>
+
+<body>
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute vec4 vPosition;
+attribute vec4 vColor;
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_Position = vPosition;
+    fColor = vColor;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec4 fColor;
+void
+main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="duckshot.js"></script>
+
+    <header>
+        <h1>Duckshot!</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Heim</a>
+    </nav>
+    <section>
+    <canvas id="gl-canvas" width="1000" height="500"></canvas>
+    </section>
+    <footer>
+        <p>Benjamín Reynir Jóhannsson</p>
+        <a href="mailto:brj46@hi.is">brj46@hi.is</a>
+    </footer>
+    </body>
+</html>
