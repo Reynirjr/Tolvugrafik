@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Heimadaemi 3 dæmi 2</title>
+<link rel="stylesheet" href="../h3.css">
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+
+void main()
+{
+    gl_Position = vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform float time;
+uniform vec2 resolution;
+
+void main()
+{
+    vec4 color;
+    
+    // Fá stöðluð hnit bútar (gl_FragCoord er í skjáhnitum)
+    vec2 st = gl_FragCoord.xy / resolution.xy;
+    
+
+    st = (2.0 * st - 1.0);
+    st.x = st.x - mod(time, 2.0) + 1.0;  
+    st.y = st.y + sin(time * 2.0) * 0.7;  
+
+
+    if (length(st) < 0.1) {
+        color = vec4(0.969, 0.710, 0.596, 1.0); 
+    } else {
+        color = vec4(0.6 , 0.8, 0.9, 1.0);
+    }
+
+    gl_FragColor = color;
+}
+</script>
+
+<script type="text/javascript" src="../../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../../Common/initShaders.js"></script>
+<script type="text/javascript" src="../../Common/MV.js"></script>
+<script type="text/javascript" src="drawCircle.js"></script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="600" height="600">
+    Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<a href="../../" class="button">til baka</a>
+</body>
+</html>

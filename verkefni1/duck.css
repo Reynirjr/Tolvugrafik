@@ -8,7 +8,7 @@ body, h1, p, a, canvas, html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #a3dddf;
     color: #333;
     overflow: hidden; 
     height: 100vh; 
@@ -18,7 +18,7 @@ body {
 
 
 header {
-    background-color: #79a0d5;
+    background-color: #317375;
     color: white;
     padding: 20px;
     width: 100%;
@@ -34,7 +34,7 @@ header {
 nav {
     margin: 5px;
     padding: 5px 10px;
-    background-color: #f0f0f0;
+    background-color: #a3dddf;
     position: fixed;
     top: 70px; 
     width: 100%;
@@ -44,7 +44,8 @@ nav {
 }
 
 nav a {
-    color: #79a0d5;
+    background-color:#F7B598 ;
+    color: #000000;
     text-decoration: none;
     font-size: 1em; 
     padding: 5px 15px; 
@@ -56,7 +57,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #79a0d5;
+    background-color: #d46536;
     color: white;
 }
 
@@ -70,7 +71,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
+    background-color: #a3dddf;
     overflow: hidden;
 }
 
@@ -87,7 +88,7 @@ canvas {
 }
 
 button {
-    background-color: #79a0d5;
+    background-color: #249a9e;
     border: none;
     color: #fff;
     padding: 15px 32px;
@@ -103,7 +104,7 @@ button {
 }
 
 button:hover{
-    background-color: #413962;
+    background-color: #6ab7ba;
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
@@ -114,7 +115,7 @@ button:active{
 }
 
 footer {
-    background-color: #333;
+    background-color: #317375;
     color: white;
     padding: 10px;
     text-align: center;
@@ -128,7 +129,7 @@ footer {
 }
 
 footer a {
-    color: #79a0d5;
+    color: #F7B598;
     text-decoration: none;
 }
 

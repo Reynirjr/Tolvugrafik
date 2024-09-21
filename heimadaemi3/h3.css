@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a3dddf;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -43,11 +43,10 @@ a {
 }
 
 a:hover {
-    background-color: #e96e39;
+    background-color: #e86832;
 }
 
 #HringslediVal, #CsliderVal {
     font-weight: bold;
     margin-left: 5px;
-    background-color:#e96e39 ;
 }

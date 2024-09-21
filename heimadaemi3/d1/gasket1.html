@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Heimadæmi 3 dæmi 1</title>
+<link rel="stylesheet" href="../h3.css">
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+uniform float scale;
+    uniform vec2 offset;
+
+void main() {
+    vec4 offsetPosition = vPosition + vec4(offset.x / scale, offset.y/ scale, 0.0, 0.0); 
+    gl_PointSize = scale / 10.0;
+    gl_Position = vec4(offsetPosition.x * scale, offsetPosition.y * scale, offsetPosition.zw);
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+    uniform vec4 color;
+
+    void main() {
+        gl_FragColor = color;
+    }
+</script>
+
+<script type="text/javascript" src="../../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../../Common/initShaders.js"></script>
+<script type="text/javascript" src="../../Common/MV.js"></script>
+<script type="text/javascript" src="gasket1.js"></script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<a href="../../" class="button">til baka</a>
+</body>
+</html>
