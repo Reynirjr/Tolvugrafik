@@ -5,6 +5,7 @@ var numVertices  = 36;
 
 var points = [];
 var colors = [];
+var keysPressed = {};
 
 var movement = false;     // Do we rotate?
 var spinX = 0;
@@ -78,6 +79,14 @@ window.onload = function init()
         }
     } );
 
+    window.addEventListener("keydown", function(e){
+        keysPressed[e.key] = true;
+    });
+    window.addEventListener("keyup", function(e){
+        keysPressed[e.key] = false;
+    });
+
+
     render();
 }
 
@@ -125,12 +134,26 @@ function quad(a, b, c, d)
     }
 }
 
+function spinModel() {
+    if (keysPressed["ArrowLeft"]) {
+        spinY -= 1;
+    }
+    if (keysPressed["ArrowRight"]) {
+        spinY += 1;
+    }
+    if (keysPressed["ArrowUp"]) {
+        spinX += 1;
+    }
+    if (keysPressed["ArrowDown"]) {
+        spinX -= 1;
+    }
+}
 
 function render()
 {
     gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-       
+    spinModel();
 
     var mv = mat4();
     mv = mult( mv, rotateX(spinX) );

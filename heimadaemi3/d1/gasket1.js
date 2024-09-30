@@ -70,6 +70,15 @@ window.onload = function init() {
             setUniformVariables();
         }
     });
+
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowUp") {
+            scale *= 1.07;
+        } else if (e.key === "ArrowDown") {
+            scale *= 0.93;
+        }
+        setUniformVariables();
+    });
 };
 
 function setUniformVariables() {

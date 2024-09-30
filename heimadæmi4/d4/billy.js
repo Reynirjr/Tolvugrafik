@@ -164,7 +164,7 @@ function render() {
     spinBilly();
 
     spinX += 0.1;
-    spinY += 0.2;
+    spinY -= 0.2;
 
    
 
