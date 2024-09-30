@@ -69,7 +69,7 @@ window.onload = function init() {
             color = [Math.random(), Math.random(), Math.random(), 1.0];
             setUniformVariables();
         }
-    });
+    });     
 
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowUp") {
