@@ -5,6 +5,7 @@ var numVertices  = 36;
 
 var points = [];
 var colors = [];
+var keysPressed = {};//Heldur utan um hvort lykill sé niðri eða ekki
 
 var movement = false;     // Do we rotate?
 var spinX = -10;
@@ -84,6 +85,16 @@ window.onload = function init()
             scale *= 0.93;  // Minnka
         }
     });
+
+    window.addEventListener("keydown", function(e){
+        keysPressed[e.key] = true;
+    });
+
+    window.addEventListener("keyup", function (e) {
+        keysPressed[e.key] = false;
+    });
+
+
     
     render();
 }
@@ -131,13 +142,31 @@ function quad(a, b, c, d)
         
     }
 }
+function spinBilly() {
+    if (keysPressed["ArrowUp"]) {
+        spinX += 1;
+    }
+    if (keysPressed["ArrowDown"]) {
+        spinX -= 1;
+    }
+    if (keysPressed["ArrowLeft"]) {
+        spinY += 1;
+    }
+    if (keysPressed["ArrowRight"]) {
+        spinY -= 1;
+    }
+}
 
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
+    spinBilly();
+
     spinX += 0.1;
     spinY += 0.2;
+
+   
 
     var mv = mat4();
     mv = mult(mv, scalem(scale, scale, scale));
@@ -191,6 +220,8 @@ function render() {
     mv1 = mult(mv1, scalem(0.8, 0.05, 0.45));
     gl.uniformMatrix4fv(matrixLoc, false, flatten(mv1));
     gl.drawArrays(gl.TRIANGLES, 0, numVertices);
+
+    
 
     requestAnimFrame(render);
 }
