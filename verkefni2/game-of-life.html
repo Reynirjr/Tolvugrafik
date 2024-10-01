@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+    <meta name="description" content="Heimasíða Egils" />
+    <meta charset="utf-8">
+    <title>Heimasíða Egils</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Egill Magnússon" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/verkefni.css">
+    <link rel="stylesheet" href="/css/tolvugrafik/main.css">
+    <script id="vertex-shader" type="x-shader/x-vertex">
+    attribute  vec4 vPosition;
+    attribute  vec4 vColor;
+    varying vec4 fColor;
+
+    uniform mat4 transform;
+
+    void main() 
+    {
+        fColor = vColor;
+        gl_Position = transform * vPosition;
+    } 
+  </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+    varying vec4 fColor;
+
+    void main()
+    {
+        gl_FragColor = fColor;
+    }
+  </script>
+    <script type="text/javascript" src="../Common/MV.js"></script>
+    <script type="text/javascript" src="../common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+    <script src="game-of-life.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" id="log">Game of <span>life</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="/#heim">Heim</a>
+            <a href="/#um-mig">Um mig</a>
+            <a href="/#verkefni">Verkefni</a>
+        </nav>
+    </header>
+    <div id="top">
+    </div>
+    <div class="project-container">
+        <div class="fractal-container" id="worley">
+            <canvas id="gl-canvas" width="512" height="512"></canvas>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

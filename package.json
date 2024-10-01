@@ -1,0 +1,20 @@
+{
+  "name": "tolvugrafik",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "sass": "sass styles.scss styles.css",
+    "sass-watch": "sass --watch styles.scss styles.css",
+    "dev": "concurrently \"npm run sass-watch\" \"npm run browser-sync\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.0.1",
+    "sass": "^1.79.4",
+    "sass-watch": "^0.1.0"
+  }
+}

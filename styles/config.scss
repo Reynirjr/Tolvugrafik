@@ -1,0 +1,52 @@
+:root {
+    --font-family: Arial, sans-serif;
+    --line-height: 1.6;
+    --background-color-body: #a3dddf;
+    --text-color: #000000;
+    --padding-body: 20px;
+
+    --header-background-color: #317375;
+    --header-text-color: #fff;
+    --header-padding: 20px 0;
+    --header-margin-bottom: 20px;
+
+    --h1-font-size: 2.5em;
+
+    --main-max-width: 1200px;
+    --main-margin: 0 auto;
+
+    --section-margin-bottom: 40px;
+
+    --h2-font-size: 2em;
+    --h2-margin-bottom: 10px;
+    --h2-text-color: #444;
+
+    --card-container-gap: 20px;
+    --card-background-color: #F7B598;
+    --card-border-color: #000000;
+    --card-border-radius: 5px;
+    --card-padding: 20px;
+    --card-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --card-hover-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --card-transition: transform 0.2s, box-shadow 0.2s;
+
+    --h3-margin-bottom: 15px;
+    --h3-text-color: #333;
+
+    --card-img-max-width: 300px;
+    --card-img-border-radius: 5px;
+    --card-img-margin-bottom: 15px;
+
+    --link-text-color: #f4f4f4;
+    --link-background-color: #317375;
+    --link-padding: 10px 15px;
+    --link-border-radius: 5px;
+    --link-hover-background-color: #a7c8c9;
+    --link-transition: background-color 0.3s;
+
+    --footer-background-color: #317375;
+    --footer-text-color: #fff;
+    --footer-padding: 10px 0;
+    --footer-margin-top: 40px;
+    --footer-border-radius: 5px;
+}

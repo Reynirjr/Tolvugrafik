@@ -1,0 +1,58 @@
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--card-container-gap);
+}
+
+.card {
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-box-shadow);
+    transition: var(--card-transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: var(--h3-margin-bottom);
+    color: var(--h3-text-color);
+}
+
+.card p {
+    margin-bottom: var(--h3-margin-bottom);
+}
+
+.card img {
+    width: 100%;
+    max-width: var(--card-img-max-width);
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--card-img-border-radius);
+    margin-bottom: var(--card-img-margin-bottom);
+}
+
+.card a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--link-text-color);
+    background-color: var(--link-background-color);
+    padding: var(--link-padding);
+    border-radius: var(--link-border-radius);
+    transition: var(--link-transition);
+    margin-top: auto;
+}
+
+.card a:hover {
+    background-color: var(--link-hover-background-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-box-shadow);
+}
