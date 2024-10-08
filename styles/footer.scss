@@ -6,8 +6,17 @@ footer {
     padding: var(--footer-padding);
     margin-top: var(--footer-margin-top);
     border-radius: var(--footer-border-radius);
+    width: 100%;
 }
 
 footer p {
     margin: 0;
+}
+footer a {
+    color: #F7B598;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

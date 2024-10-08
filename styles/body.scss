@@ -1,5 +1,9 @@
 
 body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-family);
     line-height: var(--line-height);
     background-color: var(--background-color-body);

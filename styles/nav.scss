@@ -1,0 +1,28 @@
+
+nav {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #a3dddf;
+    top: 70px; 
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+nav a {
+    background-color:#F7B598 ;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1em; 
+    padding: 5px 15px; 
+    border: 1px solid #79a0d5;
+    border-radius: 3px; 
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin: 0 5px; 
+}
+
+nav a:hover {
+    background-color: #d46536;
+    color: white;
+}

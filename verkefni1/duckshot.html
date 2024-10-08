@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Duckshot!</title>
-    <link rel="stylesheet" type="text/css" href="duck.css">
+    <link rel="stylesheet" href="../styles.css">
     <meta name="description" 
         content="Leikur sem er verkefni í Tölvugrafík í Háskóla Íslands ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     
 </head>
 
-<body>
+<body class="duck-body">
 <script id="vertex-shader" type="x-shader/x-vertex">
 
 attribute vec4 vPosition;
@@ -50,12 +50,11 @@ main()
     <nav>
         <a href="../index.html">Heim</a>
     </nav>
-    <section>
-    <canvas id="gl-canvas" width="1000" height="500"></canvas>
+    <section class="duck-section">
+    <canvas id="gl-canvas" class="duck-canvas" width="1000" height="500"></canvas>
     </section>
     <footer>
         <p>Benjamín Reynir Jóhannsson</p>
-        <a href="mailto:brj46@hi.is">brj46@hi.is</a>
     </footer>
     </body>
 </html>

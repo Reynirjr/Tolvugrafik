@@ -6,7 +6,8 @@
     "browser-sync": "browser-sync start --server --files index.html styles.css",
     "sass": "sass styles.scss styles.css",
     "sass-watch": "sass --watch styles.scss styles.css",
-    "dev": "concurrently \"npm run sass-watch\" \"npm run browser-sync\""
+    "dev": "concurrently \"npm run sass-watch\" \"npm run browser-sync\"",
+    "lint": "stylelint styles.scss ./**/*.scss"
   },
   "author": "",
   "license": "ISC",
