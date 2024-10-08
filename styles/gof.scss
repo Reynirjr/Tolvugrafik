@@ -1,0 +1,25 @@
+.gof-canvas {
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    @media (min-width: 550px){
+        width:90%;
+    }
+    @media (min-width: 700px){
+        width:80%;
+    }
+    @media (min-width: 1000px){
+        width:60%;
+    }
+    @media (min-width: 1200px){
+        width:50%;
+    }
+    @media (min-width: 1400px){
+        width:40%;
+    }
+    
+}
