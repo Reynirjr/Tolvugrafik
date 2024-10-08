@@ -81,6 +81,7 @@ window.onload = function init()
 
     window.addEventListener("keydown", function(e){
         keysPressed[e.key] = true;
+        e.preventDefault();
     });
     window.addEventListener("keyup", function(e){
         keysPressed[e.key] = false;
