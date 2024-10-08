@@ -7,6 +7,7 @@ var points = [];
 var colors = [];
 var keysPressed = {};//Heldur utan um hvort lykill sé niðri eða ekki
 
+
 var movement = false;     // Do we rotate?
 var spinX = -10;
 var spinY = 180;
