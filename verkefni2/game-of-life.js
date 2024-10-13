@@ -28,8 +28,6 @@ var updateInterval = 3500;
 var startingAnimationInProgress = false;
 var delayAfterStart = false;
 
-var resetInProgress = false;
-var resetStartTime = null;
 
 
 
@@ -59,7 +57,6 @@ window.onload = function () {
 
 	const resetButton = document.getElementById('reset-button');
     resetButton.addEventListener('click', function () {
-		resetInProgress = true;
         grid = createEmptyGrid(gridSize);
         prevGrid = createEmptyGrid(gridSize);
 		deathTimes = createTimeGrid(gridSize);
