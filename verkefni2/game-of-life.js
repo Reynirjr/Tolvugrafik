@@ -38,6 +38,12 @@ var vertexColors = [
     [1.0, 1.0, 1.0, 1.0], 
 ];
 
+function setupWebGL() {
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clearColor(0.6 , 0.8, 0.9, 1.0);
+    gl.enable(gl.DEPTH_TEST);
+}
+
 window.onload = function () {
     canvas = document.getElementById("gl-canvas");
     gl = WebGLUtils.setupWebGL(canvas);
@@ -49,6 +55,7 @@ window.onload = function () {
 
 	deathTimes = createTimeGrid(gridSize);
 	reviveTimes = createTimeGrid(gridSize);
+    
 
 	const resetButton = document.getElementById('reset-button');
     resetButton.addEventListener('click', function () {
@@ -121,7 +128,7 @@ window.onload = function () {
             var currentPinchDistance = getPinchDistance(e.touches[0], e.touches[1]);
             var pinchZoomFactor = initialPinchDistance / currentPinchDistance;
             zoom = lastPinchZoom * pinchZoomFactor;
-            zoom = Math.max(Math.min(zoom, 100.0), 0.5); // Gera ráð fyrir mín/maks zoom
+            zoom = Math.max(Math.min(zoom, 100.0), 0.5); 
             e.preventDefault();
         }
     });
@@ -176,11 +183,7 @@ function getPinchDistance(touch1, touch2) {
     return Math.sqrt(dx * dx + dy * dy); 
 }
 
-function setupWebGL() {
-    gl.viewport(0, 0, canvas.width, canvas.height);
-    gl.clearColor(0.6 , 0.8, 0.9, 1.0);
-    gl.enable(gl.DEPTH_TEST);
-}
+
 function initBuffers(program) {
 
     var cBuffer = gl.createBuffer();
@@ -223,14 +226,14 @@ function quad(a, b, c, d) {
     ];
 
     var vertexColors = [
-        [0.0, 0.0, 0.0, 1.0],  // black
-        [1.0, 0.0, 0.0, 1.0],  // red
-        [1.0, 1.0, 0.0, 1.0],  // yellow
-        [0.0, 1.0, 0.0, 1.0],  // green
-        [0.0, 0.0, 1.0, 1.0],  // blue
-        [1.0, 0.0, 1.0, 1.0],  // magenta
-        [0.0, 1.0, 1.0, 1.0],  // cyan
-        [1.0, 1.0, 1.0, 1.0]   // white
+        [0.2, 0.2, 0.2, 1.0], 
+        [1.0, 0.8, 0.2, 1.0], 
+        [1.0, 1.0, 0.6, 1.0], 
+        [0.0, 0.8, 0.2, 1.0], 
+        [0.0, 0.6, 1.0, 1.0], 
+        [1.0, 0.4, 0.8, 1.0], 
+        [0.0, 0.8, 1.0, 1.0],  
+        [1.0, 1.0, 1.0, 1.0]   
     ];
 
     var indices = [a, b, c, a, c, d];
