@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="Is">
+<head>
+    <meta charset="utf-8">
+    <title>Viewpoints</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+
+uniform mat4 projection;
+uniform mat4 modelview;
+
+void main() 
+{
+    gl_Position = projection * modelview * vPosition;
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+   
+uniform vec4 fColor;
+
+void main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../../Common/initShaders.js"></script>
+<script type="text/javascript" src="../../Common/MV.js"></script>
+<script type="text/javascript" src="viewpoints-hus.js"></script>
+
+
+<h4>Sláið á 1, 2, ..., 9 til að skipta um sjónarhorn.  Núverandi sjónarhorn er fyrir neðan myndina</h4>
+<h4>Örvalyklar hækka og lækka staðsetningu áhorfanda (fer eftir sjónarhorni)</h4>
+<a href="../../index.html">Til baka</a>
+<canvas id="gl-canvas" width="700" height="700">
+  
+<div id="Viewpoint"></div>
+<div id="Height"></div>
+   
+
+
+</body>
+</html>
