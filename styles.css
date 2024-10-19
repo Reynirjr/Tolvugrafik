@@ -283,6 +283,11 @@ a:hover {
   background-color: #e96e39;
 }
 
+.button {
+  position: absolute;
+  bottom: 2%;
+}
+
 #HringslediVal, #CsliderVal {
   font-weight: bold;
   margin-left: 5px;
