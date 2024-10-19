@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="IS">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Heimadæmi 5 dæmi 2</title>
+        <link rel="stylesheet" href="../../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <script id="vertex-shader" type="x-shader/x-vertex">
+
+        attribute  vec4 vPosition;
+        attribute vec4 vColor;
+        varying vec4 fColor;
+
+        uniform mat4 modelViewMatrix;
+        uniform mat4 projectionMatrix;
+
+        void main()
+        {
+            fColor = vColor;
+            gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+        }
+        </script>
+
+        <script id="fragment-shader" type="x-shader/x-fragment">
+
+        precision mediump float;
+
+        varying vec4 fColor;
+
+        void main()
+        {
+            gl_FragColor = fColor;
+
+        }
+        </script>
+
+        <script type="text/javascript" src="../../Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="../../Common/initShaders.js"></script>
+        <script type="text/javascript" src="../../Common/MV.js"></script>
+        <script type="text/javascript" src="figureHH-col.js"></script>
+
+
+        <canvas id="gl-canvas" width="600" height="600"></canvas>
+
+        <label for="speedSlider">Hraði:</label>
+        <input type="range" id="speedSlider" min="1" max="20" value="6" oninput="speedOutput.value = speedSlider.value">
+        <output id="speedOutput">6</output>
+
+        <a href="../../index.html">Til baka</a>
+    </body>
+</html>
