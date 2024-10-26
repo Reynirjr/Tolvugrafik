@@ -5,7 +5,7 @@ var numVertices  = 36;
 
 var points = [];
 var colors = [];
-var keysPressed = {};//Heldur utan um hvort lykill sé niðri eða ekki
+var keysPressed = {};
 
 
 var movement = false;     // Do we rotate?
