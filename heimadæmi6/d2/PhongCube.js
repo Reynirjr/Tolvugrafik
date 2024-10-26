@@ -153,6 +153,7 @@ window.onload = function init() {
         keysPressed[e.key] = false;
     });
     canvas.addEventListener("touchstart", function (e) {
+        e.preventDefault();
         if (e.touches.length === 1) {
             movement = true;
             origX = e.touches[0].clientX;
@@ -165,6 +166,7 @@ window.onload = function init() {
     }, { passive: false });
 
     canvas.addEventListener("touchmove", function (e) {
+        e.preventDefault();
         if (e.touches.length === 1 && movement) {
             var deltaX = e.touches[0].clientX - origX;
             var deltaY = e.touches[0].clientY - origY;
@@ -190,6 +192,7 @@ window.onload = function init() {
     }, { passive: false });
 
     canvas.addEventListener("touchend", function (e) {
+        e.preventDefault();
         if (e.touches.length < 2) {
             initialPinchDistance = null;
         }
